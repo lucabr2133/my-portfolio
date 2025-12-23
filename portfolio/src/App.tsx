@@ -4,7 +4,6 @@ import { Link } from "react-scroll";
 
 import MiImagen from "./assets/myecommerce.png";
 import socialImage from "./assets/socialmedia.png";
-import { url } from "inspector";
 
 export default function App() {
   return (
