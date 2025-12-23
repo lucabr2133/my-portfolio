@@ -105,8 +105,8 @@ export default function App() {
         desc: "A modern social media app featuring real-time messaging, posts, comments, and follower interactions. Includes Passport authentication, Prisma ORM, and full testing coverage for both frontend and backend to ensure performance and reliability.",
         img: socialImage,
         techs: ["Typescript", "React", "Postgres", "Prisma", "Node", "Express", "Socket.io","Vitest","React-test"],
-        urlCode:'https://echo32232.netlify.app/',
-        urlView:'https://github.com/lucabr2133/Social-media'
+        urlCode:'https://github.com/lucabr2133/Social-media',
+        urlView:'https://echo32232.netlify.app/'
       }
           ].map((project) => (
             <motion.div
