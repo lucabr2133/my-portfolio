@@ -53,8 +53,8 @@ export default function App() {
 
         <div className="flex gap-5 mt-4">
           {[
-            { icon: "/linkedin.svg", text: "LinkedIn", url: "https://linkedin.com" },
-            { icon: "/github.svg", text: "GitHub", url: "https://github.com" },
+            { icon: "/linkedin.svg", text: "LinkedIn", url: "https://www.linkedin.com/in/luca-brandan-59b14a2b0/" },
+            { icon: "/github.svg", text: "GitHub", url: "https://github.com/lucabr2133" },
           ].map((social) => (
             <motion.a
               key={social.text}
@@ -246,7 +246,7 @@ export default function App() {
 
             <motion.a
               whileHover={{ scale: 1.15 }}
-              href="https://github.com/tuusuario"
+              href="https://github.com/lucabr2133"
               target="_blank"
               className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition"
             >
@@ -255,7 +255,7 @@ export default function App() {
 
             <motion.a
               whileHover={{ scale: 1.15 }}
-              href="https://linkedin.com/in/tuusuario"
+              href="https://www.linkedin.com/in/luca-brandan-59b14a2b0/"
               target="_blank"
               className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition"
             >
