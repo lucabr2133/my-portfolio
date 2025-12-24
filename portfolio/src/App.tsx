@@ -1,4 +1,4 @@
-import { FileUp, Github, Linkedin, Mail } from "lucide-react";
+import { Copy, FileUp, Github, Linkedin, Mail } from "lucide-react";
 import { motion } from "motion/react";
 import { Link } from "react-scroll";
 
@@ -9,7 +9,6 @@ export default function App() {
   return (
     <main className="min-h-screen w-full flex flex-col items-center text-white">
 
-      {/* NAVBAR */}
       <header className="fixed top-0 w-full z-50 backdrop-blur-xl bg-black/20 border-b border-white/10">
         <nav className="max-w-6xl mx-auto flex justify-between items-center px-8 py-4">
           <h1 className="text-xl font-bold tracking-wide">Luca Brandan</h1>
@@ -30,7 +29,6 @@ export default function App() {
         </nav>
       </header>
 
-      {/* HERO */}
       <section id="start" className="h-screen flex flex-col justify-center items-center text-center gap-6">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
@@ -67,18 +65,28 @@ export default function App() {
             </motion.a>
           ))}
 
-          {/* CV */}
-          <motion.button
+          <motion.a
+            href="/portfolio.pdf"
+            target="_blank"
             whileHover={{ scale: 1.1, rotate: 1 }}
             className="flex bg-white/5 px-5 py-2 rounded-xl border border-white/10 items-center gap-2"
           >
             <FileUp />
             C.V
+          </motion.a>
+             <motion.button
+            whileHover={{ scale: 1.1, rotate: 1 }}
+            className="flex bg-white/5 px-5 py-2 rounded-xl border border-white/10 items-center gap-2"
+          >
+            <Copy className="hover:bg-neutral-500 rounded-2xl w-9 h-9 p-2 cursor-pointer " onClick={()=>{
+              window.navigator.clipboard.writeText('lucab2188@gmail.com')
+
+            }} />
+            lucab2188@gmail.com
           </motion.button>
         </div>
       </section>
 
-      {/* PROJECTS */}
       <section id="projects" className="w-full max-w-5xl mx-auto py-24 px-6">
         <motion.h1
           initial={{ opacity: 0, y: 25 }}
@@ -165,7 +173,6 @@ export default function App() {
         </div>
       </section>
 
-      {/* SKILLS */}
       <section id="skills" className="w-full max-w-5xl mx-auto py-24 text-center px-6">
         <motion.h1
           initial={{ opacity: 0, y: 25 }}
@@ -224,7 +231,6 @@ export default function App() {
         </motion.div>
       </section>
 
-      {/* FOOTER */}
       <footer
         id="contact"
         className="w-full bg-black/40 backdrop-blur-xl border-t border-white/10 py-14 mt-20"
