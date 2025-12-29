@@ -66,7 +66,7 @@ export default function App() {
           ))}
 
           <motion.a
-            href="/portfolio.pdf"
+            href="/Resume.pdf"
             target="_blank"
             whileHover={{ scale: 1.1, rotate: 1 }}
             className="flex bg-white/5 px-5 py-2 rounded-xl border border-white/10 items-center gap-2"
