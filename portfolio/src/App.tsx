@@ -486,7 +486,7 @@ export default function App() {
 
           {/* NOTA: Cambiar '549XXXXXXXXXX' por tu número de WhatsApp real con código de área */}
           <motion.a
-            href="https://wa.me/549XXXXXXXXXX?text=Hola%20Luca,%20vi%20tu%20portfolio%20y%20quiero%20consultarte%20por%20un%20proyecto%20web%20para%20mi%20negocio"
+            href="https://wa.me/541139387373?text=Hola%20Luca,%20vi%20tu%20portfolio%20y%20quiero%20consultarte%20por%20un%20proyecto%20web%20para%20mi%20negocio"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.03, y: -2 }}
