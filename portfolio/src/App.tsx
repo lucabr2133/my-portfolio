@@ -185,6 +185,14 @@ export default function App() {
   ];
 
   const containerRef = useRef<HTMLElement>(null);
+  const lenisRef = useRef<Lenis | null>(null);
+
+  const scrollToSection = (id: string) => {
+    const el = document.getElementById(id);
+    if (el && lenisRef.current) {
+      lenisRef.current.scrollTo(el, { offset: -80, duration: 1.4, easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)) });
+    }
+  };
 
   // Funciones auxiliares para separar texto sin depender de SplitText Premium
   const splitTextToSpans = (text: string, className: string) => {
@@ -213,6 +221,7 @@ export default function App() {
 
       // ===== 1. LENIS SMOOTH SCROLL (inicializado UNA sola vez) =====
       const lenis = new Lenis();
+      lenisRef.current = lenis;
       lenis.on("scroll", ScrollTrigger.update);
       const tickHandler = (time: number) => lenis.raf(time * 1000);
       gsap.ticker.add(tickHandler);
@@ -288,6 +297,7 @@ export default function App() {
               {navSections.map((section) => (
                 <li
                   key={section.name}
+                  onClick={() => scrollToSection(section.id)}
                   className="liSection cursor-pointer relative hover:text-white transition-colors"
                 >
                   {section.name}
