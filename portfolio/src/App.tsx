@@ -27,23 +27,23 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
 ======================================== */
 const services = [
   {
-    title: "Custom Web Design",
-    desc: "Unique, professional websites tailored to your brand identity. 100% responsive so they look flawless on any phone, tablet, or desktop.",
+    title: "Diseño Web a Medida",
+    desc: "Páginas web únicas, profesionales y adaptadas a la identidad de tu negocio. 100% responsivas para verse perfectas en celulares, tablets y computadoras.",
     icon: LayoutTemplate,
   },
   {
-    title: "SEO Optimization",
-    desc: "Technically optimized structure from day one so your business ranks at the top of Google search results and attracts organic clients.",
+    title: "Posicionamiento SEO",
+    desc: "Estructura optimizada desde el primer día para que tu negocio aparezca en los primeros resultados de Google y atraigas más clientes de forma orgánica.",
     icon: Search,
   },
   {
-    title: "Speed & Performance",
-    desc: "Websites with lightning-fast load times using modern technologies. Speed retains more visitors and maximizes conversion rates.",
+    title: "Máxima Velocidad",
+    desc: "Sitios con tiempos de carga ultrarrápidos utilizando tecnologías modernas. La velocidad retiene a tus visitantes y maximiza las tasas de conversión.",
     icon: Zap,
   },
   {
-    title: "Self-Manageable",
-    desc: "Platforms built so you can update content, images, or catalogs easily and independently, without relying on a developer.",
+    title: "Autogestionable",
+    desc: "Plataformas diseñadas para que puedas actualizar contenido, imágenes o catálogos de manera fácil e independiente, sin depender de un programador.",
     icon: Sliders,
   },
 ];
@@ -53,18 +53,18 @@ const services = [
 ======================================== */
 const projects = [
   {
-    title: "Self-Manageable E-Commerce",
-    subtitle: "Online Video Game Store (Game Shop)",
-    desc: "A high-performance online store with integrated Stripe payment gateway to automate your sales. Includes an intuitive admin panel to manage your product stock, customers, and purchases in real time.",
+    title: "E-Commerce Autogestionable",
+    subtitle: "Tienda Online de Videojuegos",
+    desc: "Una tienda online de alto rendimiento con pasarela de pago Stripe integrada para automatizar tus ventas. Incluye un panel de administración intuitivo para gestionar tu stock de productos, clientes y compras en tiempo real.",
     img: MiImagen,
     techs: ["TypeScript", "React", "Next.js", "Stripe", "SQL", "Tailwind"],
     urlCode: "https://github.com/lucabr2133/next-app-ecommerce",
     urlView: "https://next-app-ecommerce-gamma.vercel.app/",
   },
   {
-    title: "Communication Platform",
-    subtitle: "Interactive Social Network",
-    desc: "An interactive app optimized for real-time communication between users and brands. Designed with high security standards in authentication and response speed to guarantee user retention.",
+    title: "Plataforma de Comunicación",
+    subtitle: "Red Social Interactiva",
+    desc: "Una aplicación interactiva optimizada para la comunicación en tiempo real entre usuarios y marcas. Diseñada con altos estándares de seguridad y velocidad de respuesta para garantizar la retención de clientes.",
     img: socialImage,
     techs: [
       "TypeScript",
@@ -160,10 +160,10 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
         </div>
         <div className="flex gap-3 pt-2">
           <a href={project.urlCode} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-xs text-gray-400 hover:text-amber-400 transition-colors">
-            <Github className="w-4 h-4" /> View Code
+            <Github className="w-4 h-4" /> Ver Código
           </a>
           <a href={project.urlView} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-xs text-gray-400 hover:text-amber-400 transition-colors">
-            Live Demo →
+            Ver Demo →
           </a>
         </div>
       </div>
@@ -177,11 +177,11 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
 
 export default function App() {
   const navSections = [
-    { id: "start", name: "Home" },
-    { id: "services", name: "Services" },
-    { id: "projects", name: "Projects" },
-    { id: "about", name: "About" },
-    { id: "contact", name: "Contact" },
+    { id: "start", name: "Inicio" },
+    { id: "services", name: "Servicios" },
+    { id: "projects", name: "Proyectos" },
+    { id: "about", name: "Sobre Mí" },
+    { id: "contact", name: "Contacto" },
   ];
 
   const containerRef = useRef<HTMLElement>(null);
@@ -319,23 +319,23 @@ export default function App() {
           {splitTextToSpans("Luca Brandan", "char-title")}
         </h1>
         <h2 className="uppercase font-bold text-3xl tracking-wider overflow-hidden">
-          {splitTextToSpans("Fullstack Developer", "char-subtitle")}
+          {splitTextToSpans("Desarrollador Web", "char-subtitle")}
         </h2>
         <h2 className="uppercase text-center w-100 text-sm overflow-hidden flex flex-wrap justify-center">
           {splitWordsToSpans(
-            "Designing and building interactive, accessible web experiences that help businesses grow.",
+            "Diseño y desarrollo páginas web modernas, rápidas y efectivas para impulsar el crecimiento de tu negocio.",
             "word-desc",
           )}
         </h2>
         <div className="flex gap-4 [&>button]:cursor-pointer">
-          <button className="bg-white text-black px-5 py-2 rounded-lg min-w-[150px] hover:-translate-y-1 uppercase font-bold text-sm">
-            View My Projects
+          <button onClick={() => scrollToSection("projects")} className="bg-white text-black px-5 py-2 rounded-lg min-w-[150px] hover:-translate-y-1 uppercase font-bold text-sm">
+            Ver Mis Trabajos
           </button>
-          <button className="bg-transparent hover:bg-amber-400 hover:text-black border border-y-amber-400 text-amber-400  px-5 py-2 rounded-lg min-w-[150px] uppercase font-bold text-sm">
-            Get in Touch
+          <button onClick={() => scrollToSection("contact")} className="bg-transparent hover:bg-amber-400 hover:text-black border border-y-amber-400 text-amber-400  px-5 py-2 rounded-lg min-w-[150px] uppercase font-bold text-sm">
+            Contactar Ahora
           </button>
           <button className="bg-transparent border border-gray-700 hover:border-amber-400   px-5 py-2 rounded-lg min-w-[150px] uppercase font-bold text-sm">
-            <a href="/Resume.pdf">Resume</a>
+            <a href="/Resume.pdf" target="_blank" rel="noopener noreferrer">Mi CV</a>
           </button>
         </div>
       </section>
@@ -344,12 +344,11 @@ export default function App() {
       <section id="projects" className="relative z-10 w-full max-w-6xl mx-auto py-28 px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-white mb-4">
-            {splitTextToSpans("My Projects", "char-proyects")}
+            {splitTextToSpans("Mis Trabajos", "char-proyects")}
           </h2>
           <div className="section-line" />
           <p className="text-gray-500 text-sm md:text-base font-light max-w-lg mx-auto">
-            A selection of previous work built to the highest standards
-            of quality, speed, and usability.
+            Una selección de proyectos desarrollados con los más altos estándares de calidad, velocidad y diseño para potenciar negocios.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -366,13 +365,12 @@ export default function App() {
       >
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-white mb-4">
-            Services
+            Servicios
             <span className="text-amber-400">.</span>
           </h2>
           <div className="section-line" />
           <p className="text-gray-500 text-sm md:text-base font-light max-w-lg mx-auto">
-            Professional web solutions focused on growing your brand and
-            optimizing your online results.
+            Soluciones web profesionales enfocadas en hacer crecer tu marca, atraer clientes y optimizar tus resultados en internet.
           </p>
         </div>
 
@@ -390,13 +388,12 @@ export default function App() {
       >
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-white mb-4">
-            Tech Stack
+            Tecnologías
             <span className="text-amber-400">.</span>
           </h2>
           <div className="section-line" />
           <p className="text-gray-500 text-sm md:text-base font-light max-w-lg mx-auto">
-            Modern tools and languages that guarantee your website is
-            scalable, secure, and fast.
+            Herramientas y lenguajes modernos que garantizan que la página web de tu negocio sea rápida, segura y escalable.
           </p>
         </div>
 
@@ -414,7 +411,7 @@ export default function App() {
       >
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-white mb-4">
-            About Me
+            Sobre Mí
             <span className="text-amber-400">.</span>
           </h2>
           <div className="section-line" />
@@ -427,34 +424,31 @@ export default function App() {
 
           <div className="relative z-10 flex flex-col gap-6 text-center">
             <p className="text-gray-300 text-base md:text-lg leading-[1.9] font-light">
-              I'm a{" "}
+              Soy un{" "}
               <span className="text-amber-400 font-medium">
-                Freelance Fullstack Developer
+                Desarrollador Web Freelance
               </span>{" "}
-              passionate about building clean user interfaces, smooth interactions,
-              and robust, scalable applications. My main stack includes{" "}
+              apasionado por crear sitios web que realmente aporten valor a los negocios. Me especializo en diseñar interfaces atractivas, fluidas y robustas, utilizando tecnologías modernas como{" "}
               <span className="text-white font-medium">
-                React, Next.js, Node.js and TypeScript
+                React, Next.js, Node.js y TypeScript
               </span>
               .
             </p>
 
             <p className="text-gray-400 text-base md:text-lg leading-[1.9] font-light">
-              I'm currently studying{" "}
+              Actualmente estudio{" "}
               <span className="text-gray-200">
-                Information Systems Engineering
+                Ingeniería en Sistemas de Información
               </span>{" "}
-              and constantly improving my English. I'm passionate about solving
-              complex problems and bringing ideas to life as world-class digital
-              experiences.
+              y me capacito constantemente. Mi objetivo es resolver problemas complejos y transformar tus ideas en experiencias digitales de primer nivel para tus clientes.
             </p>
 
             {/* Stats */}
             <div className="grid grid-cols-3 gap-6 mt-6 pt-6 border-t border-white/[0.04]">
               {[
-                { value: "2+", label: "Years of Experience" },
-                { value: "8+", label: "Technologies" },
-                { value: "5+", label: "Projects" },
+                { value: "+2", label: "Años de Experiencia" },
+                { value: "+8", label: "Tecnologías" },
+                { value: "+5", label: "Proyectos Exitosos" },
               ].map((stat) => (
                 <div key={stat.label} className="text-center">
                   <div className="text-2xl md:text-3xl font-extrabold text-amber-400 tracking-tight">
@@ -478,31 +472,30 @@ export default function App() {
         <div className="max-w-4xl mx-auto px-6 text-center">
           <div>
             <p className="text-xs uppercase tracking-[0.3em] text-amber-400/60 font-semibold mb-4">
-              Contact
+              Contacto
             </p>
             <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-white mb-6">
-              Ready to build something
+              ¿Listo para impulsar tu negocio
               <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-amber-500">
-                amazing together?
+                en internet?
               </span>
             </h2>
             <p className="text-gray-500 text-sm md:text-base font-light max-w-md mx-auto mb-10">
-              Tell me about your idea or business. I'm open to new
-              web development projects and collaborations.
+              Cuéntame sobre tu empresa o idea. Estoy disponible para ayudarte a construir la página web que tu negocio necesita.
             </p>
 
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4 max-w-md mx-auto">
               <a
-                href="mailto:lucab2188@gmail.com?subject=Web%20Project%20Inquiry%20-%20Luca%20Brandan&body=Hi%20Luca,%20I'd%20like%20to%20ask%20you%20about%20a%20website%20for%20my%20business..."
+                href="mailto:lucab2188@gmail.com?subject=Consulta%20sobre%20proyecto%20web%20-%20Luca%20Brandan&body=Hola%20Luca,%20me%20gustaría%20consultar%20por%20una%20página%20web%20para%20mi%20negocio..."
                 className="inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-xl bg-amber-400 text-black font-bold text-sm tracking-wide w-full sm:w-auto text-center hover:bg-amber-300 hover:scale-[1.03] active:scale-[0.97] hover:-translate-y-[2px] transition-all duration-200"
               >
                 <Mail className="w-4 h-4" />
-                Start a Project
+                Iniciar Proyecto
               </a>
 
               <a
-                href="https://wa.me/549XXXXXXXXXX?text=Hi%20Luca,%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20ask%20about%20a%20web%20project%20for%20my%20business"
+                href="https://wa.me/549XXXXXXXXXX?text=Hola%20Luca,%20vi%20tu%20portfolio%20y%20me%20gustaría%20consultar%20sobre%20un%20proyecto%20web%20para%20mi%20negocio"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-xl bg-emerald-500/[0.06] border border-emerald-500/25 text-emerald-300 hover:bg-emerald-500/[0.1] hover:border-emerald-400/35 hover:scale-[1.03] active:scale-[0.97] hover:-translate-y-[2px] transition-all duration-200 text-sm font-semibold w-full sm:w-auto text-center"
@@ -552,7 +545,7 @@ export default function App() {
 
             {/* Copyright */}
             <p className="text-[11px] text-gray-600 mt-12 tracking-wide">
-              © {new Date().getFullYear()} Luca Brandan. All rights reserved.
+              © {new Date().getFullYear()} Luca Brandan. Todos los derechos reservados.
             </p>
           </div>
         </div>
