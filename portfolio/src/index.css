@@ -1,77 +1,56 @@
 @import "tailwindcss";
 @import "@fontsource-variable/inter/wght.css";
 @import "lenis/dist/lenis.css";
+
 @theme {
-  --font-sans: "Inter", sans-serif;
-  --medidaCuadradoHover: 5px;
-  --medidaCuadrado: 2px;
+  --font-sans: "Plus Jakarta Sans", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+:root {
+  color-scheme: light;
 }
 
 body {
-  font-family: "Inter", "sans-serif";
-  background-color: #050505;
-  scroll-behavior: smooth;
-}
-/* 1. Agregado el punto aquí */
-.liSection::before {
-  content: "";
-  position: absolute;
-  left: -10px;
-  top: 50%;
-  opacity: 0;
-  width: var(--medidaCuadrado);
-  height: var(--medidaCuadrado);
-  background-color: white;
-  transform: translate(-100%, 100%) rotate(0deg);
-  transform-origin: 50% 50%;
-  transition: all 0.3s ease-in-out;
+  font-family: "Plus Jakarta Sans", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: #FAFAFA;
+  color: #171717;
+  overflow-x: hidden;
+  letter-spacing: -0.015em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.liSection:hover::before {
-  opacity: 1;
-  width: var(--medidaCuadradoHover);
-  height: var(--medidaCuadradoHover);
-  transform: translate(-100%, -50%) rotate(225deg);
+/* ===== ESTILO MINIMALISTA EDITORIAL FRAMER ===== */
+.editorial-border {
+  border-color: #E5E7EB;
 }
 
-.liSection::after {
-  content: "";
-  position: absolute;
-  right: -15px;
-  top: 50%;
-  opacity: 0;
-  background-color: white;
-  width: var(--medidaCuadrado);
-  height: var(--medidaCuadrado);
-
-  /* 2, 3 y 4. Igualados los X para que suba recto, agregado rotate inicial y origin */
-  transform: translate(-50%, 100%) rotate(0deg);
-  transform-origin: 50% 50%;
-  transition: all 0.3s ease-in-out;
+.editorial-card {
+  background-color: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  transition: all 0.25s ease-out;
 }
 
-.liSection:hover::after {
-  opacity: 1;
-  width: var(--medidaCuadradoHover);
-  height: var(--medidaCuadradoHover);
-  /* Mantenemos el X en -50% para que el movimiento sea solo vertical */
-  transform: translate(-50%, -50%) rotate(225deg);
+.editorial-card:hover {
+  border-color: #D1D5DB;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.05);
 }
 
-/* ===== SCROLLBAR PERSONALIZADO ===== */
+/* ===== SCROLLBAR SOBRIO ===== */
 ::-webkit-scrollbar {
   width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #050505;
+  background: #FAFAFA;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(251, 191, 36, 0.2);
+  background: #D1D5DB;
   border-radius: 999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(251, 191, 36, 0.4);
+  background: #9CA3AF;
 }
