@@ -203,16 +203,6 @@ const steps = [
   },
 ];
 
-const offerIncludes = [
-  "Dominio propio incluido y configurado",
-  "Diseño 100% adaptable a celulares, tablets y computadoras",
-  "Botón permanente e integración directa con WhatsApp",
-  "Ubicación en Google Maps para clientes de tu zona",
-  "Carga ultrarrápida para que nadie abandone la página",
-  "Sección de servicios, fotos, precios y opiniones",
-  "Alojamiento web de alta velocidad sin mensualidades",
-  "Sin costos de mantenimiento forzoso ni letra chica",
-];
 
 const faqs = [
   {
@@ -344,10 +334,10 @@ export default function App() {
               Proceso
             </button>
             <button
-              onClick={() => scrollTo("precios")}
+              onClick={() => scrollTo("faq")}
               className="hover:text-black transition-colors cursor-pointer"
             >
-              Precios
+              Preguntas
             </button>
             <button
               onClick={() => scrollTo("contacto")}
@@ -408,10 +398,10 @@ export default function App() {
               Cómo Trabajamos
             </button>
             <button
-              onClick={() => scrollTo("precios")}
+              onClick={() => scrollTo("faq")}
               className="text-left text-sm font-medium py-1.5 text-neutral-700 hover:text-black"
             >
-              Precios & Oferta
+              Preguntas Frecuentes
             </button>
             <button
               onClick={() => scrollTo("contacto")}
@@ -801,77 +791,16 @@ export default function App() {
       </section>
 
       {/* ========================================================
-          10. OFERTA Y TRANSPARENCIA ($75.000 finales)
+          10. PREGUNTAS FRECUENTES (FAQs)
       ======================================================== */}
-      <section id="precios" className="py-24 px-6 max-w-4xl mx-auto border-t editorial-border">
-        <div className="editorial-card rounded-3xl p-8 sm:p-14">
-          <div className="max-w-xl mx-auto text-center mb-10">
-            <p className="text-xs font-semibold uppercase tracking-widest text-neutral-500 mb-3">
-              Inversión Transparente
-            </p>
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-neutral-950">
-              Todo incluido, sin costos sorpresa.
-            </h2>
-            <p className="mt-2 text-neutral-600 text-sm sm:text-base">
-              Todo lo que necesitás para tener presencia seria en internet y captar clientes.
-            </p>
-          </div>
-
-          <div className="text-center my-8 p-6 rounded-2xl bg-neutral-50 border editorial-border max-w-xs mx-auto">
-            <span className="text-xs uppercase tracking-wider text-neutral-500 font-medium block mb-1">
-              Precio Base Promocional
-            </span>
-            <div className="flex items-baseline justify-center gap-1.5">
-              <span className="text-xs text-neutral-400">Desde</span>
-              <span className="text-4xl sm:text-5xl font-black text-neutral-950 tracking-tight">
-                $75.000
-              </span>
-              <span className="text-xs text-neutral-500">finales</span>
-            </div>
-            <p className="text-xs text-neutral-700 font-medium mt-2">
-              Pagás $37.500 de seña y el saldo al entregar
-            </p>
-          </div>
-
-          <div className="max-w-xl mx-auto mt-8">
-            <h4 className="text-xs font-semibold uppercase tracking-wider text-neutral-500 mb-4 text-center">
-              Qué incluye tu página web:
-            </h4>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              {offerIncludes.map((item) => (
-                <div key={item} className="flex items-start gap-2.5">
-                  <div className="w-4 h-4 rounded-full bg-neutral-950 text-white flex items-center justify-center shrink-0 mt-0.5 text-[10px]">
-                    ✓
-                  </div>
-                  <span className="text-xs sm:text-sm text-neutral-700 leading-snug">
-                    {item}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="mt-12 text-center flex flex-col items-center">
-            <a
-              href={`${WHATSAPP_BASE_URL}?text=Hola%20LB%20STUDIO%2C%20quiero%20aprovechar%20la%20promoci%C3%B3n%20de%20la%20p%C3%A1gina%20web%20desde%20%2475.000.`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-neutral-950 hover:bg-black text-white font-medium text-sm px-8 py-3.5 rounded-full transition-all duration-200"
-            >
-              <span>Reservar mi Web con el 50%</span>
-              <ArrowRight className="w-4 h-4 text-neutral-400" />
-            </a>
-            <span className="text-xs text-neutral-400 mt-2.5">
-              Cupos limitados por semana para garantizar entregas en tiempo y forma.
-            </span>
-          </div>
-        </div>
-
-        {/* FAQs */}
-        <div className="mt-16 max-w-2xl mx-auto">
-          <h3 className="text-xl font-bold text-neutral-950 text-center mb-6">
+      <section id="faq" className="py-24 px-6 max-w-3xl mx-auto border-t editorial-border">
+        <div className="max-w-2xl mx-auto">
+          <p className="text-xs font-semibold uppercase tracking-widest text-neutral-500 mb-3 text-center">
+            Dudas Comunes
+          </p>
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-neutral-950 text-center mb-10">
             Preguntas frecuentes
-          </h3>
+          </h2>
           <div className="divide-y editorial-border">
             {faqs.map((faq, i) => (
               <div key={faq.q} className="py-4">
